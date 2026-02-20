@@ -1,4 +1,18 @@
-// ===== BOOT SCREEN =====
+// ===== HIDE EMPTY SECTIONS =====
+
+function hideEmptySections() {
+    const sections = document.querySelectorAll('.card');
+    sections.forEach(section => {
+        const content = section.innerText.trim();
+        // Hide if section only contains title or is truly empty
+        if (!content || content === section.querySelector('h2').innerText) {
+            section.style.display = 'none';
+        }
+    });
+}
+
+// Call after projects are loaded
+setTimeout(hideEmptySections, 500);
 
 const terminal = document.getElementById("terminal");
 const terminalText = document.getElementById("terminal-text");
@@ -101,27 +115,35 @@ const observer = new IntersectionObserver(entries => {
 cards.forEach(card => observer.observe(card));
 
 
-// ===== GITHUB FETCH =====
+// ===== MANUAL PROJECTS =====
 
-const username = "killerspidey";
 const projectContainer = document.getElementById("github-projects");
 
-fetch(`https://api.github.com/users/${username}/repos?sort=updated`)
-    .then(res => res.json())
-    .then(data => {
-        const filtered = data.filter(r => !r.fork).slice(0,5);
-        projectContainer.innerHTML = "";
+const manualProjects = [
+    {
+        name: "Web Application Vulnerabilty Scanner",
+        description: "A security tool for scanning and identifying web application vulnerabilities",
+        url: "https://github.com/killerspidey/web-application-vulnerability-scanner"
+    },
+    {
+        name: "Aarohan Shyam APP Project Python",
+        description: "Python application project showcasing core programming concepts",
+        url: "https://github.com/killerspidey/-Aarohan-Shyam-APP-Project-Python"
+    },
+    {
+        name: "Aarohan Shyam APP Project Java",
+        description: "Java application project demonstrating OOP principles and design patterns",
+        url: "https://github.com/killerspidey/Aarohan-Shyam-APP-Project-Java"
+    }
+];
 
-        filtered.forEach(repo => {
-            const div = document.createElement("div");
-            div.classList.add("project-item");
-            div.innerHTML = `
-                <a href="${repo.html_url}" target="_blank">${repo.name}</a>
-                <div>${repo.description || "No description provided."}</div>
-            `;
-            projectContainer.appendChild(div);
-        });
-    })
-    .catch(() => {
-        projectContainer.innerHTML = "Unable to load projects.";
-    });
+projectContainer.innerHTML = "";
+manualProjects.forEach(project => {
+    const div = document.createElement("div");
+    div.classList.add("project-item");
+    div.innerHTML = `
+        <a href="${project.url}" target="_blank">${project.name}</a>
+        <div>${project.description || "Project repository"}</div>
+    `;
+    projectContainer.appendChild(div);
+});
