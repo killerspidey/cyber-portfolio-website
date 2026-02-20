@@ -2,74 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Aarohan Shyam | Cyber Security</title>
+    <title>Aarohan Shyam | Cyber Security Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- TERMINAL BOOT SCREEN -->
+<div id="terminal">
+    <div class="terminal-window">
+        <div class="terminal-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="terminal-title">cyber-os v1.0</span>
+        </div>
+        <div id="terminal-text" class="terminal-body"></div>
+    </div>
+</div>
+
+<!-- MATRIX BACKGROUND -->
 <canvas id="matrix"></canvas>
 
+<!-- NAVBAR -->
 <nav>
     <div class="logo">AS</div>
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#github">GitHub</a></li>
+        <li><a href="#github-stats">GitHub</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
 </nav>
 
-<section class="hero reveal">
-    <h1 class="glow">Aarohan Shyam</h1>
-    <p>Cyber Security | Web App Security | Python</p>
-    <a href="resume.pdf" class="btn" download>Download Resume</a>
-</section>
+<!-- MAIN CONTENT -->
+<div class="container hidden" id="main-content">
 
-<section id="about" class="card reveal">
-    <h2>About</h2>
-    <p>B.Tech CSE (Cyber Security)<br>SRM IST Delhi NCR</p>
-</section>
+    <section class="hero">
+        <h1 class="glitch" data-text="Aarohan Shyam">Aarohan Shyam</h1>
+        <p class="subtitle">Cyber Security | Web App Security | Python</p>
+        <a href="resume.pdf" class="btn" download>Download Resume</a>
+    </section>
 
-<section id="projects" class="card reveal">
-    <h2>Projects</h2>
-    <p><strong>Web Application Vulnerability Scanner</strong><br>
-    SQL Injection & XSS detection using Python</p>
-</section>
+    <section id="about" class="card">
+        <h2>About</h2>
+        <p>
+            B.Tech CSE (Cyber Security)<br>
+            SRM IST Delhi NCR
+        </p>
+    </section>
 
-<section id="github" class="card reveal">
-    <h2>GitHub Activity</h2>
-    <div class="stats">
-        <img src="https://github-readme-stats.vercel.app/api?username=killerspidey&show_icons=true&theme=radical">
-        <img src="https://github-readme-streak-stats.herokuapp.com/?user=killerspidey&theme=radical">
-    </div>
-</section>
+    <section id="projects" class="card">
+        <h2>Projects</h2>
+        <div id="github-projects">Loading projects...</div>
+    </section>
 
-<section id="skills" class="card reveal">
-    <h2>Skills</h2>
-    <p>Python • Linux • Git • Networking • OWASP</p>
-</section>
+    <section id="github-stats" class="card">
+        <h2>GitHub Activity</h2>
+        <div class="stats-container">
+            <img src="https://github-readme-stats.vercel.app/api?username=killerspidey&show_icons=true&theme=radical" />
+            <img src="https://github-readme-streak-stats.herokuapp.com/?user=killerspidey&theme=radical" />
+        </div>
+    </section>
 
-<section id="experience" class="card reveal">
-    <h2>Experience</h2>
-    <p>
-        <strong>Social Media Core Member – BitBucks</strong><br>
-        Jan 2026 – Present<br><br>
+    <section id="skills" class="card">
+        <h2>Skills</h2>
+        <p>Python • Linux • Git • Networking • OWASP</p>
+    </section>
 
-        <strong>Social Media Core Member – GFG</strong><br>
-        Sept 2025 – Present
-    </p>
-</section>
+    <section id="experience" class="card">
+        <h2>Experience</h2>
+        <p>
+            Social Media Core Member – BitBucks (Jan 2026–Present)<br>
+            Social Media Core Member – GFG Campus Body (Sept 2025–Present)
+        </p>
+    </section>
 
-<section id="contact" class="card reveal">
-    <h2>Contact</h2>
-    <p>
-        aarohanshyam@gmail.com<br>
-        linkedin.com/in/aarohanshyam
-    </p>
-</section>
+    <section id="contact" class="card">
+        <h2>Contact</h2>
+        <p>
+            aarohanshyam@gmail.com<br>
+            linkedin.com/in/aarohanshyam
+        </p>
+    </section>
+
+</div>
 
 <script src="script.js"></script>
 </body>
