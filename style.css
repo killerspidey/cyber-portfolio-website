@@ -266,9 +266,22 @@ h2 {
     gap: clamp(15px, 4vw, 25px);
 }
 
-.stats-container img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: clamp(20px, 4vw, 30px);
+}
+
+.skill-category h3 {
+    color: #00FF8C;
+    margin-bottom: 12px;
+    font-size: clamp(14px, 3vw, 16px);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.skill-category p {
+    color: #E0EFFF;
+    font-size: clamp(12px, 2.5vw, 14px);
+    line-height: 1.8;
 }
