@@ -114,17 +114,17 @@ const projectContainer = document.getElementById("github-projects");
 const manualProjects = [
     {
         name: "Web Application Vulnerabilty Scanner",
-        description: "A security tool for scanning and identifying web application vulnerabilities",
+        description: "An automated Python-based web security tool designed to crawl and scan web applications for critical vulnerabilities. This scanner identifies common flaws such as SQL Injection, Cross-Site Scripting (XSS), and File Inclusions, providing security enthusiasts and developers with an efficient way to audit their web assets.",
         url: "https://github.com/killerspidey/web-application-vulnerability-scanner"
     },
     {
         name: "Aarohan Shyam APP Project Python",
-        description: "Python application project showcasing core programming concepts",
+        description: "A versatile Python desktop application featuring a custom-built GUI for personal task management. This project integrates user authentication and utility modules to provide a streamlined, interactive experience, showcasing clean code structure and functional software design.",
         url: "https://github.com/killerspidey/-Aarohan-Shyam-APP-Project-Python"
     },
     {
         name: "Aarohan Shyam APP Project Java",
-        description: "Java application project demonstrating OOP principles and design patterns",
+        description: "A comprehensive Java desktop application built with Swing/AWT, featuring a modular design for personal management and utility tasks. This project showcases the implementation of Object-Oriented Programming, GUI event handling, and backend data integration to provide a seamless user experience.",
         url: "https://github.com/killerspidey/Aarohan-Shyam-APP-Project-Java"
     }
 ];
