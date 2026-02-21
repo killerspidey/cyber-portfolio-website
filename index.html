@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Aarohan Shyam | Cyber Security Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,7 +33,6 @@
     <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#github-stats">GitHub</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -46,12 +48,19 @@
         <a href="resume.pdf" class="btn" download>Download Resume</a>
     </section>
 
-    <section id="about" class="card">
-        <h2>About Me</h2>
-        <p>
-            I am a Cyber Security researcher and developer currently pursuing my B.Tech in Computer Science Engineering with a specialization in Cyber Security from SRM IST Delhi NCR. My work is driven by a deep interest in identifying and mitigating digital threats, particularly those outlined in the OWASP Top 10. I specialize in building automated security tools and secure backend systems that bridge the gap between development and defensive security.<br>
-            Beyond the terminal, I am an active contributor to the campus ecosystem. I serve as a Social Media Core Member for the BitBucks FinTech Club and the GeeksforGeeks Campus Body. These roles allow me to combine my technical knowledge with creative communication and leadership.
-        </p>
+    <section id="about" class="card about-section">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                    I am a Cyber Security researcher and developer currently pursuing my B.Tech in Computer Science Engineering with a specialization in Cyber Security from SRM IST Delhi NCR. My work is driven by a deep interest in identifying and mitigating digital threats, particularly those outlined in the OWASP Top 10. I specialize in building automated security tools and secure backend systems that bridge the gap between development and defensive security.<br>
+                    Beyond the terminal, I am an active contributor to the campus ecosystem. I serve as a Social Media Core Member for the BitBucks FinTech Club and the GeeksforGeeks Campus Body. These roles allow me to combine my technical knowledge with creative communication and leadership.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="assets/profile.jpg" alt="Aarohan Shyam">
+            </div>
+        </div>
     </section>
 
     <section id="projects" class="card">
@@ -102,15 +111,26 @@
         </p>
     </section>
 
-    <section id="contact" class="card">
-        <h2>Contact</h2>
-        <p>
-            aarohanshyam@gmail.com<br>
-            linkedin.com/in/aarohanshyam
-        </p>
-    </section>
 
 </div>
+
+<!-- FOOTER -->
+<footer id="contact">
+    <div class="footer-content">
+        <h3>Get in Touch</h3>
+        <div class="contact-links">
+            <div class="contact-item">
+                <span class="contact-icon">✉</span>
+                <a href="mailto:aarohanshyam@gmail.com">aarohanshyam@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <span class="contact-icon">💼</span>
+                <a href="https://linkedin.com/in/aarohanshyam" target="_blank">linkedin.com/in/aarohanshyam</a>
+            </div>
+        </div>
+        <p class="footer-note">© 2026 Aarohan Shyam | Cyber Security Researcher & Developer</p>
+    </div>
+</footer>
 
 <script src="script.js"></script>
 </body>
