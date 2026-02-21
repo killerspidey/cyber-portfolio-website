@@ -2,7 +2,7 @@
 
 ### Modern Cybersecurity Portfolio with Terminal-Inspired Design
 
-[![Live Demo](https://img.shields.io/badge/🌐_Click_to_View_Live-00CC00?style=for-the-badge&logoColor=black)](https://aarohanshyam.com) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![GitHub Profile](https://img.shields.io/badge/GitHub-killerspidey-00D9FF?style=for-the-badge)](https://github.com/killerspidey)
+[![Live Demo](https://img.shields.io/badge/🌐_Click_to_View_Live-00CC00?style=for-the-badge&logoColor=black)](https://aarohan-portfolio.netlify.app/) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE) [![GitHub Profile](https://img.shields.io/badge/GitHub-killerspidey-00D9FF?style=for-the-badge)](https://github.com/killerspidey)
 
 ---
 
