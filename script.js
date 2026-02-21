@@ -32,34 +32,26 @@ const bootLines = [
 let line = 0;
 
 function typeLine(text, callback) {
-    let i = 0;
-    const interval = setInterval(() => {
-        terminalText.innerHTML += text.charAt(i);
-        i++;
-        if (i >= text.length) {
-            clearInterval(interval);
-            terminalText.innerHTML += "<br>";
-            callback();
-        }
-    }, 20);
+    terminalText.innerHTML += text + "<br>";
+    callback();
 }
 
 function runBoot() {
     if (line < bootLines.length) {
         typeLine(bootLines[line], () => {
             line++;
-            setTimeout(runBoot, 300);
+            setTimeout(runBoot, 80);
         });
     } else {
         terminalText.innerHTML += "<br>root@cyber-os:~$ <span class='cursor'></span>";
         setTimeout(() => {
             terminal.style.opacity = "0";
-            terminal.style.transition = "opacity 0.8s ease";
+            terminal.style.transition = "opacity 0.4s ease";
             setTimeout(() => {
                 terminal.style.display = "none";
                 mainContent.classList.remove("hidden");
-            }, 800);
-        }, 1200);
+            }, 400);
+        }, 400);
     }
 }
 
