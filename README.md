@@ -54,13 +54,14 @@ python -m http.server 8000
 resume/
 │
 ├── index.html          # Main HTML entry point
-├── script.js           # Interactions, animations & boot sequence
-├── style.css           # Complete stylesheet
-├── resume.pdf          # Downloadable resume
+├── script.js           # JavaScript - boot animation, matrix effect, interactions
+├── style.css           # CSS stylesheet - cyberpunk theme & animations
+├── resume.pdf          # Downloadable resume file
 ├── README.md           # Project documentation
 │
-└── assets/             # Static assets
-    └── (media files)
+├── assets/             # Assets directory (empty - for future media)
+│
+└── .git/               # Git version control
 ```
 
 ---
