@@ -42,93 +42,228 @@
 <!-- MAIN CONTENT -->
 <div class="container hidden" id="main-content">
 
+    <!-- HERO -->
     <section class="hero">
+        <div class="hero-tag">&gt; whoami</div>
         <h1 class="glitch" data-text="Aarohan Shyam">Aarohan Shyam</h1>
-        <p class="subtitle">Cyber Security | Web App Security | Python</p>
-        <a href="resume.pdf" class="btn" download>Download Resume</a>
+        <p class="subtitle">Cyber Security &nbsp;|&nbsp; Web App Security &nbsp;|&nbsp; Python</p>
+        <div class="hero-badges">
+            <span class="badge">OWASP</span>
+            <span class="badge">Penetration Testing</span>
+            <span class="badge">Secure Coding</span>
+            <span class="badge">Python</span>
+        </div>
+        <div class="hero-actions">
+            <a href="resume.pdf" class="btn btn-primary" download>↓ Download Resume</a>
+            <a href="#projects" class="btn btn-ghost">View Projects →</a>
+        </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about" class="card about-section">
         <div class="about-content">
             <div class="about-text">
-                <h2>About Me</h2>
+                <h2><span class="cmd-prefix">$</span> cat about.txt</h2>
                 <p>
-                    I am a Cyber Security researcher and developer currently pursuing my B.Tech in Computer Science Engineering with a specialization in Cyber Security from SRM IST Delhi NCR. My work is driven by a deep interest in identifying and mitigating digital threats, particularly those outlined in the OWASP Top 10. I specialize in building automated security tools and secure backend systems that bridge the gap between development and defensive security.<br>
-                    Beyond the terminal, I am an active contributor to the campus ecosystem. I serve as a Social Media Core Member for the BitBucks FinTech Club and the GeeksforGeeks Campus Body. These roles allow me to combine my technical knowledge with creative communication and leadership.
+                    Cybersecurity student at SRM IST Delhi NCR pursuing B.Tech in Computer Science Engineering (Cyber Security specialization). Focused on web application security, vulnerability assessment, and building Python-based security tooling aligned with OWASP Top 10.
                 </p>
+                <p style="margin-top: 16px;">
+                    Currently deepening hands-on skills through TryHackMe, HackTheBox, and PortSwigger Web Academy — working toward eJPT certification. Interested in penetration testing, secure system design, and offensive security tooling.
+                </p>
+                <div class="about-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">2+</span>
+                        <span class="stat-label">Years in Security</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">OWASP</span>
+                        <span class="stat-label">Top 10 Focus</span>
+                    </div>
+                </div>
             </div>
             <div class="about-image">
-                <img src="assets/profile.jpg" alt="Aarohan Shyam">
+                <div class="image-frame">
+                    <img src="assets/profile.jpg" alt="Aarohan Shyam">
+                    <div class="image-scan-line"></div>
+                </div>
+                <div class="image-label">aarohan@cyber-os:~$</div>
             </div>
         </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" class="card">
-        <h2>Projects</h2>
-        <div id="github-projects">Loading projects...</div>
+        <h2><span class="cmd-prefix">$</span> ls -la projects/</h2>
+        <div id="github-projects"></div>
     </section>
 
-    <section id="github-stats" class="card">
-        <h2>GitHub Activity</h2>
-        <div class="stats-container">
-            <img src="https://github-readme-stats.vercel.app/api?username=killerspidey&show_icons=true&theme=radical" />
-            <img src="https://github-readme-streak-stats.herokuapp.com/?user=killerspidey&theme=radical" />
+    <!-- PLATFORMS -->
+    <section id="platforms" class="card">
+        <h2><span class="cmd-prefix">$</span> cat platforms.log</h2>
+        <div class="platforms-grid">
+            <div class="platform-item">
+                <div class="platform-header">
+                    <span class="platform-icon">⚡</span>
+                    <span class="platform-name">TryHackMe</span>
+                    <a href="https://tryhackme.com" target="_blank" class="platform-link">↗</a>
+                </div>
+                <p class="platform-desc">Actively completing the Jr Penetration Tester and Web Fundamentals learning paths. Rank updating as rooms are cleared.</p>
+                <div class="platform-tags">
+                    <span class="ptag">Web Exploitation</span>
+                    <span class="ptag">Linux Privesc</span>
+                    <span class="ptag">Network Security</span>
+                </div>
+            </div>
+            <div class="platform-item">
+                <div class="platform-header">
+                    <span class="platform-icon">🎯</span>
+                    <span class="platform-name">HackTheBox</span>
+                    <a href="https://hackthebox.com" target="_blank" class="platform-link">↗</a>
+                </div>
+                <p class="platform-desc">Working through Starting Point machines and easy-tier boxes across web exploitation and privilege escalation categories.</p>
+                <div class="platform-tags">
+                    <span class="ptag">SQLi</span>
+                    <span class="ptag">XSS</span>
+                    <span class="ptag">Privesc</span>
+                </div>
+            </div>
+            <div class="platform-item">
+                <div class="platform-header">
+                    <span class="platform-icon">🔬</span>
+                    <span class="platform-name">PortSwigger Web Academy</span>
+                    <a href="https://portswigger.net/web-security" target="_blank" class="platform-link">↗</a>
+                </div>
+                <p class="platform-desc">Completing labs across SQL Injection, XSS, CSRF, and authentication vulnerability tracks using Burp Suite.</p>
+                <div class="platform-tags">
+                    <span class="ptag">Burp Suite</span>
+                    <span class="ptag">OWASP Top 10</span>
+                    <span class="ptag">Free</span>
+                </div>
+            </div>
         </div>
+        <p class="platform-note">// Profile links and rankings will be added as milestones are reached</p>
     </section>
 
+    <!-- SKILLS -->
     <section id="skills" class="card">
-        <h2>Skills</h2>
+        <h2><span class="cmd-prefix">$</span> cat skills.json</h2>
         <div class="skills-container">
             <div class="skill-category">
-                <h3>Programming</h3>
-                <p>Python • Java • JavaScript • C • C++</p>
+                <h3>Languages</h3>
+                <p>Python • JavaScript • C • C++ • Java • Bash</p>
+            </div>
+            <div class="skill-category">
+                <h3>Security Tools</h3>
+                <p>Burp Suite • Nmap • Wireshark • Kali Linux • Gobuster • Nikto</p>
             </div>
             <div class="skill-category">
                 <h3>Cybersecurity</h3>
-                <p>OWASP Top 10 • Vulnerability Assessment • Secure Coding Practices</p>
+                <p>OWASP Top 10 • Vulnerability Assessment • Penetration Testing • Secure Coding</p>
             </div>
             <div class="skill-category">
                 <h3>Networking</h3>
-                <p>TCP/IP • HTTP/HTTPS • DNS Basics • Client-Server Architecture</p>
+                <p>TCP/IP • HTTP/HTTPS • DNS • ARP • Packet Analysis</p>
             </div>
             <div class="skill-category">
-                <h3>Security Concepts</h3>
-                <p>SQL Injection • Cross-Site Scripting (XSS) • Authentication & Authorization Basics</p>
+                <h3>Attack Techniques</h3>
+                <p>SQL Injection • XSS • CSRF • Privilege Escalation • Auth Bypass</p>
             </div>
             <div class="skill-category">
-                <h3>Tools</h3>
-                <p>Git • GitHub • Linux • Firebase • Antigravity</p>
+                <h3>Dev Tools</h3>
+                <p>Git • GitHub • Linux • Firebase • VS Code</p>
             </div>
         </div>
     </section>
 
+    <!-- EXPERIENCE -->
     <section id="experience" class="card">
-        <h2>Experience</h2>
-        <p>
-            Executive – BitBucks (Jan 2026–Present)<br>
-            Social Media Team Core Member – GFG Campus Body (Sept 2025–Present)<br>
-            Photography Team Lead – ISTE (Oct 2025–Jan 2026)
-        </p>
+        <h2><span class="cmd-prefix">$</span> cat experience.log</h2>
+        <div class="experience-list">
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <span class="exp-role">Executive</span>
+                        <span class="exp-org">BitBucks FinTech Club, SRM IST</span>
+                    </div>
+                    <span class="exp-date">Jan 2026 – Present</span>
+                </div>
+                <p class="exp-desc">Contributing to club operations and events focused on fintech and emerging technology. Involved in coordinating technical sessions and managing outreach for student members interested in the intersection of finance and technology.</p>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <span class="exp-role">Social Media Core Member</span>
+                        <span class="exp-org">GeeksforGeeks Campus Chapter, SRM IST</span>
+                    </div>
+                    <span class="exp-date">Sep 2025 – Present</span>
+                </div>
+                <p class="exp-desc">Managing digital presence and content strategy for the campus chapter. Creating technical content to promote coding culture, hackathons, and programming events across the student community.</p>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div>
+                        <span class="exp-role">Photography Lead</span>
+                        <span class="exp-org">ISTE, SRM IST</span>
+                    </div>
+                    <span class="exp-date">Oct 2025 – Jan 2026</span>
+                </div>
+                <p class="exp-desc">Led photography coverage for major campus events including RUBAROO'25 and Shakti Utsav. Managed a small team and handled post-production for official event documentation.</p>
+            </div>
+
+        </div>
     </section>
 
+    <!-- CERTIFICATIONS -->
+    <section id="certs" class="card">
+        <h2><span class="cmd-prefix">$</span> ls certs/</h2>
+        <div class="certs-list">
+            <div class="cert-item">
+                <div class="cert-icon">🎓</div>
+                <div>
+                    <div class="cert-name">Cybersecurity Fundamentals</div>
+                    <div class="cert-issuer">Infosys Springboard &nbsp;·&nbsp; 2025</div>
+                </div>
+                <span class="cert-status active">ACTIVE</span>
+            </div>
+            <div class="cert-item cert-pending">
+                <div class="cert-icon">⏳</div>
+                <div>
+                    <div class="cert-name">eJPT — Junior Penetration Tester</div>
+                    <div class="cert-issuer">eLearnSecurity / INE &nbsp;·&nbsp; In Progress</div>
+                </div>
+                <span class="cert-status pending">PENDING</span>
+            </div>
+        </div>
+    </section>
 
 </div>
 
-<!-- FOOTER -->
+<!-- FOOTER / CONTACT -->
 <footer id="contact">
     <div class="footer-content">
-        <h3>Get in Touch</h3>
+        <h3><span class="cmd-prefix">$</span> ./contact.sh</h3>
         <div class="contact-links">
-            <div class="contact-item">
+            <a href="mailto:aarohanshyam@gmail.com" class="contact-item">
                 <span class="contact-icon">✉</span>
-                <a href="mailto:aarohanshyam@gmail.com">aarohanshyam@gmail.com</a>
-            </div>
-            <div class="contact-item">
+                <span>aarohanshyam@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/aarohanshyam" target="_blank" class="contact-item">
                 <span class="contact-icon">💼</span>
-                <a href="https://linkedin.com/in/aarohanshyam" target="_blank">linkedin.com/in/aarohanshyam</a>
-            </div>
+                <span>linkedin.com/in/aarohanshyam</span>
+            </a>
+            <a href="https://github.com/killerspidey" target="_blank" class="contact-item">
+                <span class="contact-icon">🐙</span>
+                <span>github.com/killerspidey</span>
+            </a>
         </div>
-        <p class="footer-note">© 2026 Aarohan Shyam | Cyber Security Researcher & Developer</p>
+        <p class="footer-note">© 2026 Aarohan Shyam &nbsp;|&nbsp; Cyber Security Researcher & Developer</p>
     </div>
 </footer>
 

@@ -1,18 +1,4 @@
-// ===== HIDE EMPTY SECTIONS =====
-
-function hideEmptySections() {
-    const sections = document.querySelectorAll('.card');
-    sections.forEach(section => {
-        const content = section.innerText.trim();
-        // Hide if section only contains title or is truly empty
-        if (!content || content === section.querySelector('h2').innerText) {
-            section.style.display = 'none';
-        }
-    });
-}
-
-// Call after projects are loaded
-setTimeout(hideEmptySections, 500);
+// ===== TERMINAL BOOT =====
 
 const terminal = document.getElementById("terminal");
 const terminalText = document.getElementById("terminal-text");
@@ -21,10 +7,10 @@ const mainContent = document.getElementById("main-content");
 const bootLines = [
     "[ 00.01 ] Initializing cyber-os kernel...",
     "[ 00.07 ] Loading security modules...",
-    "[ 00.12 ] Identity confirmed: <span class='highlight'>HACKER</span>",
+    "[ 00.12 ] Identity confirmed: <span class='highlight'>AAROHAN SHYAM</span>",
     "[ 00.18 ] Establishing encrypted channels...",
     "[ 00.24 ] Scanning threat environment...",
-    "[ 00.30 ] System integrity: VERIFIED",
+    "[ 00.30 ] System integrity: <span class='highlight'>VERIFIED</span>",
     "[ 00.36 ] Launching secure interface...",
     "[ 00.42 ] Access Granted."
 ];
@@ -33,6 +19,7 @@ let line = 0;
 
 function typeLine(text, callback) {
     terminalText.innerHTML += text + "<br>";
+    terminalText.scrollTop = terminalText.scrollHeight;
     callback();
 }
 
@@ -40,102 +27,163 @@ function runBoot() {
     if (line < bootLines.length) {
         typeLine(bootLines[line], () => {
             line++;
-            setTimeout(runBoot, 80);
+            setTimeout(runBoot, 90);
         });
     } else {
         terminalText.innerHTML += "<br>root@cyber-os:~$ <span class='cursor'></span>";
         setTimeout(() => {
             terminal.style.opacity = "0";
-            terminal.style.transition = "opacity 0.4s ease";
+            terminal.style.transition = "opacity 0.5s ease";
             setTimeout(() => {
                 terminal.style.display = "none";
                 mainContent.classList.remove("hidden");
-            }, 400);
-        }, 400);
+                initScrollReveal();
+            }, 500);
+        }, 500);
     }
 }
 
 runBoot();
 
 
-// ===== MATRIX =====
+// ===== MATRIX BACKGROUND =====
 
 const canvas = document.getElementById("matrix");
 const ctx = canvas.getContext("2d");
 
-canvas.height = window.innerHeight;
-canvas.width = window.innerWidth;
+function resizeCanvas() {
+    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
-const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const fontSize = 14;
-const columns = canvas.width / fontSize;
-const drops = [];
-
-for (let x = 0; x < columns; x++) drops[x] = 1;
+const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ<>/{}[]#@!";
+const fontSize = 13;
+let columns = Math.floor(canvas.width / fontSize);
+let drops = Array(columns).fill(1);
 
 function drawMatrix() {
     ctx.fillStyle = "rgba(0,0,0,0.05)";
-    ctx.fillRect(0,0,canvas.width,canvas.height);
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = "#00FF8C";
     ctx.font = fontSize + "px monospace";
 
     for (let i = 0; i < drops.length; i++) {
         const text = letters.charAt(Math.floor(Math.random() * letters.length));
         ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
         if (drops[i] * fontSize > canvas.height && Math.random() > 0.975)
             drops[i] = 0;
-
         drops[i]++;
     }
 }
 
-setInterval(drawMatrix, 33);
+setInterval(drawMatrix, 35);
 
 
 // ===== SCROLL REVEAL =====
 
-const cards = document.querySelectorAll('.card');
+function initScrollReveal() {
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, { threshold: 0.1 });
 
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting)
-            entry.target.classList.add('show');
-    });
-}, { threshold: 0.2 });
-
-cards.forEach(card => observer.observe(card));
+    cards.forEach(card => observer.observe(card));
+}
 
 
-// ===== MANUAL PROJECTS =====
+// ===== PROJECTS =====
 
 const projectContainer = document.getElementById("github-projects");
 
-const manualProjects = [
+const projects = [
     {
-        name: "Web Application Vulnerabilty Scanner",
-        description: "An automated Python-based web security tool designed to crawl and scan web applications for critical vulnerabilities. This scanner identifies common flaws such as SQL Injection, Cross-Site Scripting (XSS), and File Inclusions, providing security enthusiasts and developers with an efficient way to audit their web assets.",
-        url: "https://github.com/killerspidey/web-application-vulnerability-scanner"
+        name: "Web Application Vulnerability Scanner",
+        description: "Python-based scanner targeting OWASP Top 10 vulnerabilities. Detects SQL Injection, XSS, CSRF, insecure headers, and open redirects via automated parameter fuzzing. Validated against DVWA and OWASP Juice Shop.",
+        tags: ["Python", "OWASP Top 10", "SQLi", "XSS", "CSRF"],
+        url: "https://github.com/killerspidey/web-application-vulnerability-scanner",
+        status: "active"
     },
     {
-        name: "Aarohan Shyam APP Project Python",
-        description: "A versatile Python desktop application featuring a custom-built GUI for personal task management. This project integrates user authentication and utility modules to provide a streamlined, interactive experience, showcasing clean code structure and functional software design.",
-        url: "https://github.com/killerspidey/-Aarohan-Shyam-APP-Project-Python"
+        name: "Network Traffic Analyzer",
+        description: "Real-time packet capture tool built with Scapy that detects ARP spoofing, port scanning, and DNS tunnelling. Decodes TCP/IP, HTTP, and DNS layers. Validated in an isolated VirtualBox home lab against Metasploitable 2.",
+        tags: ["Python", "Scapy", "Wireshark", "Kali Linux", "Networking"],
+        url: "https://github.com/killerspidey",
+        status: "active"
     },
     {
-        name: "Aarohan Shyam APP Project Java",
-        description: "A comprehensive Java desktop application built with Swing/AWT, featuring a modular design for personal management and utility tasks. This project showcases the implementation of Object-Oriented Programming, GUI event handling, and backend data integration to provide a seamless user experience.",
-        url: "https://github.com/killerspidey/Aarohan-Shyam-APP-Project-Java"
+        name: "EduBuddy — Academic Query Platform",
+        description: "Full-stack academic platform built in a 48-hour hackathon. Firebase authentication with role-based access control, Firestore security rules to prevent injection attacks, and structured input sanitisation throughout.",
+        tags: ["HTML", "CSS", "JavaScript", "Firebase", "Auth"],
+        url: "https://github.com/killerspidey",
+        status: "active"
     }
 ];
 
 projectContainer.innerHTML = "";
-manualProjects.forEach(project => {
+projects.forEach((project, index) => {
     const div = document.createElement("div");
     div.classList.add("project-item");
+    div.style.animationDelay = `${index * 0.1}s`;
     div.innerHTML = `
-        <a href="${project.url}" target="_blank">${project.name}</a>
-        <div>${project.description || "Project repository"}</div>
+        <div class="project-top">
+            <div class="project-title-row">
+                <span class="project-index">0${index + 1}</span>
+                <a class="project-name" href="${project.url}" target="_blank">${project.name}</a>
+                <a class="project-arrow" href="${project.url}" target="_blank">↗</a>
+            </div>
+        </div>
+        <p class="project-desc">${project.description}</p>
+        <div class="project-tags">
+            ${project.tags.map(t => `<span class="tag">${t}</span>`).join("")}
+        </div>
     `;
     projectContainer.appendChild(div);
 });
+
+
+// ===== ACTIVE NAV HIGHLIGHT =====
+
+const sections = document.querySelectorAll("section[id], footer[id]");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+const navObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === `#${entry.target.id}`) {
+                    link.classList.add("active");
+                }
+            });
+        }
+    });
+}, { threshold: 0.4 });
+
+sections.forEach(section => navObserver.observe(section));
+
+
+// ===== TYPING EFFECT FOR HERO SUBTITLE =====
+
+const subtitleEl = document.querySelector(".subtitle");
+if (subtitleEl) {
+    const originalText = subtitleEl.textContent;
+    subtitleEl.textContent = "";
+    let i = 0;
+
+    function typeSubtitle() {
+        if (i < originalText.length) {
+            subtitleEl.textContent += originalText[i];
+            i++;
+            setTimeout(typeSubtitle, 35);
+        }
+    }
+
+    // Start typing after boot sequence finishes
+    setTimeout(typeSubtitle, bootLines.length * 90 + 1200);
+}
