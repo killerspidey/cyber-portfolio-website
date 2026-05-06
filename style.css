@@ -469,6 +469,16 @@ h3 {
     transform: translateX(4px);
 }
 
+.project-item:first-child {
+    border-color: rgba(255, 215, 0, 0.2);
+    background: rgba(255, 215, 0, 0.02);
+}
+
+.project-item:first-child:hover {
+    border-color: rgba(255, 215, 0, 0.4);
+    background: rgba(255, 215, 0, 0.05);
+}
+
 .project-title-row {
     display: flex;
     align-items: center;
@@ -510,6 +520,18 @@ h3 {
 .project-arrow:hover {
     opacity: 1;
     transform: translate(2px, -2px);
+}
+
+.project-featured {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #FFD700;
+    border: 1px solid rgba(255, 215, 0, 0.35);
+    background: rgba(255, 215, 0, 0.06);
+    padding: 2px 8px;
+    border-radius: 4px;
+    flex-shrink: 0;
 }
 
 .project-desc {

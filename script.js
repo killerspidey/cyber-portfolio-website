@@ -103,24 +103,25 @@ const projectContainer = document.getElementById("github-projects");
 
 const projects = [
     {
-        name: "Web Application Vulnerability Scanner",
-        description: "Python-based scanner targeting OWASP Top 10 vulnerabilities. Detects SQL Injection, XSS, CSRF, insecure headers, and open redirects via automated parameter fuzzing. Validated against DVWA and OWASP Juice Shop.",
-        tags: ["Python", "OWASP Top 10", "SQLi", "XSS", "CSRF"],
-        url: "https://github.com/killerspidey/web-application-vulnerability-scanner",
-        status: "active"
+        name: "JARVIS — Multi-Agent AI Desktop Assistant",
+        description: "Tony Stark-style always-on voice assistant with a frameless PyQt6 HUD and wake-word detection. Multi-agent routing engine dispatches commands to 8 specialist AI agents (Web, Code, System, Memory and more). Multi-provider API pool supports Gemini, Claude, Groq and OpenRouter with automatic key rotation and rate-limit fallback across 100% free tiers. 20 modular skills including system control, screen reader, process manager, code execution and real-time web search.",
+        tags: ["Python", "PyQt6", "Gemini API", "Anthropic API", "Groq", "SpeechRecognition", "Multi-Agent"],
+        url: "https://github.com/killerspidey/J.A.R.V.I.S..git",
+        status: "active",
+        featured: true
     },
     {
         name: "Network Traffic Analyzer",
-        description: "Real-time packet capture tool built with Scapy that detects ARP spoofing, port scanning, and DNS tunnelling. Decodes TCP/IP, HTTP, and DNS layers. Validated in an isolated VirtualBox home lab against Metasploitable 2.",
-        tags: ["Python", "Scapy", "Wireshark", "Kali Linux", "Networking"],
-        url: "https://github.com/killerspidey",
+        description: "Real-time packet capture tool built with Scapy that detects ARP spoofing, port scanning (SYN/FIN/XMAS/NULL), DNS tunnelling, and cleartext HTTP credential exposure. Decodes TCP/IP, HTTP, and DNS protocol layers. Validated in an isolated VirtualBox home lab against Metasploitable 2. 40-test suite, JSON report generation.",
+        tags: ["Python", "Scapy", "Wireshark", "Kali Linux", "Networking", "Packet Analysis"],
+        url: "https://github.com/killerspidey/Network-Traffic-Analyzer.git",
         status: "active"
     },
     {
-        name: "EduBuddy — Academic Query Platform",
-        description: "Full-stack academic platform built in a 48-hour hackathon. Firebase authentication with role-based access control, Firestore security rules to prevent injection attacks, and structured input sanitisation throughout.",
-        tags: ["HTML", "CSS", "JavaScript", "Firebase", "Auth"],
-        url: "https://github.com/killerspidey",
+        name: "Web Application Vulnerability Scanner",
+        description: "Python-based scanner targeting OWASP Top 10 vulnerabilities. Detects SQL Injection, XSS, CSRF, insecure headers, and open redirects via automated parameter fuzzing. Severity classification engine maps findings to CVSS-style scoring. Validated against DVWA and OWASP Juice Shop.",
+        tags: ["Python", "OWASP Top 10", "SQLi", "XSS", "CSRF", "Penetration Testing"],
+        url: "https://github.com/killerspidey/web-application-vulnerability-scanner",
         status: "active"
     }
 ];
@@ -135,6 +136,7 @@ projects.forEach((project, index) => {
             <div class="project-title-row">
                 <span class="project-index">0${index + 1}</span>
                 <a class="project-name" href="${project.url}" target="_blank">${project.name}</a>
+                ${project.featured ? '<span class="project-featured">★ FEATURED</span>' : ''}
                 <a class="project-arrow" href="${project.url}" target="_blank">↗</a>
             </div>
         </div>
