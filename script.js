@@ -106,7 +106,7 @@ const projects = [
         name: "JARVIS — Multi-Agent AI Desktop Assistant",
         description: "Tony Stark-style always-on voice assistant with a frameless PyQt6 HUD and wake-word detection. Multi-agent routing engine dispatches commands to 8 specialist AI agents (Web, Code, System, Memory and more). Multi-provider API pool supports Gemini, Claude, Groq and OpenRouter with automatic key rotation and rate-limit fallback across 100% free tiers. 20 modular skills including system control, screen reader, process manager, code execution and real-time web search.",
         tags: ["Python", "PyQt6", "Gemini API", "Anthropic API", "Groq", "SpeechRecognition", "Multi-Agent"],
-        url: "https://github.com/killerspidey",
+        url: "https://github.com/killerspidey/jarvis",
         status: "active",
         featured: true
     },
@@ -114,7 +114,7 @@ const projects = [
         name: "Network Threat Detection & Traffic Analyzer",
         description: "Real-time packet capture tool detecting ARP spoofing, port scanning, and DNS tunnelling with <2s alert latency — flagged 100% of simulated arpspoof and Nmap SYN scan events in a VirtualBox lab (Kali + Metasploitable 2). Decodes TCP/IP, HTTP, and DNS layers to surface unencrypted credential transmissions. Output structured as per-session summaries mapped to SOC Tier 1 triage workflow. 40-test suite, JSON report generation.",
         tags: ["Python", "Scapy", "Wireshark", "Kali Linux", "SOC", "Packet Analysis", "Threat Detection"],
-        url: "https://github.com/killerspidey",
+        url: "https://github.com/killerspidey/network-traffic-analyzer",
         status: "active"
     },
     {
