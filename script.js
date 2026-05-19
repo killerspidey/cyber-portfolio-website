@@ -106,7 +106,7 @@ const projects = [
         name: "JARVIS — Multi-Agent AI Desktop Assistant",
         description: "Tony Stark-style always-on voice assistant with a frameless PyQt6 HUD and wake-word detection. Multi-agent routing engine dispatches commands to 8 specialist AI agents (Web, Code, System, Memory and more). Multi-provider API pool supports Gemini, Claude, Groq and OpenRouter with automatic key rotation and rate-limit fallback across 100% free tiers. 20 modular skills including system control, screen reader, process manager, code execution and real-time web search.",
         tags: ["Python", "PyQt6", "Gemini API", "Anthropic API", "Groq", "SpeechRecognition", "Multi-Agent"],
-        url: "https://github.com/killerspidey/jarvis",
+        url: "https://github.com/killerspidey/J.A.R.V.I.S.",
         status: "active",
         featured: true
     },
