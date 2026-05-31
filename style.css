@@ -758,7 +758,8 @@ h3 { font-size: clamp(12px, 2.3vw, 14px); }
     width: 100%;
     height: auto;
     display: block;
-    filter: brightness(0.9);
+    /* invert flips white→black, hue-rotate+saturate tints active cells green */
+    filter: invert(1) hue-rotate(100deg) saturate(2) brightness(0.85);
 }
 .gh-chart-err {
     font-size: 11px;
