@@ -131,6 +131,30 @@ const projects = [
         tags: ["Python", "OWASP Top 10", "SQLi", "XSS", "CSRF", "Penetration Testing"],
         url: "https://github.com/killerspidey/web-application-vulnerability-scanner",
         featured: false
+    },
+    {
+        name: "Linux Privilege Escalation Checker",
+        description: "Modular Python tool automating detection of 9 Linux privilege escalation vectors. Cross-references SUID/SGID binaries against a local GTFOBins database, parses sudo misconfigurations, flags writable cron scripts and systemd service files, detects PATH hijacking vectors, checks kernel version against 9 known LPE CVEs (Dirty Pipe, Dirty COW, PwnKit, etc.), and hunts credentials via a loot module targeting /etc/shadow, .env files, SSH keys, and shell history. Validated against Metasploitable 2 — 4 real escalation paths identified. Zero external dependencies.",
+        metrics: [
+            { num: "9", desc: "Escalation modules" },
+            { num: "9", desc: "Kernel CVEs checked" },
+            { num: "4", desc: "Output formats" }
+        ],
+        tags: ["Python", "Linux", "Privilege Escalation", "GTFOBins", "Kali Linux", "CTF", "HackTheBox", "TryHackMe"],
+        url: "https://github.com/killerspidey/privesc-checker",
+        featured: false
+    },
+    {
+        name: "Password Auditor & Hash Cracker",
+        description: "Modular Python pipeline for cracking password hashes and auditing password strength. Supports MD5, SHA1, SHA256, SHA512, and Linux shadow formats ($1$/$5$/$6$/bcrypt). Three attack modes: dictionary, rule-based mutation (13 rules including leet substitution, year injection, keyboard walks), and brute force. Integrates directly with privesc-checker via --from-loot flag to automatically pull and crack hashes from loot JSON output. Includes entropy scoring and policy violation reporting. Validated on a 1,000-hash MD5 test set with >90% crack rate in dictionary mode.",
+        metrics: [
+            { num: "13", desc: "Mutation rules" },
+            { num: "8", desc: "Hash formats" },
+            { num: ">90%", desc: "Crack rate on weak sets" }
+        ],
+        tags: ["Python", "Hash Cracking", "Password Auditing", "MD5", "SHA512", "Shadow Files", "Pentesting"],
+        url: "https://github.com/killerspidey/password-auditor",
+        featured: false
     }
 ];
 
