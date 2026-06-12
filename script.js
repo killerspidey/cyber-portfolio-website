@@ -97,14 +97,14 @@ const projectContainer = document.getElementById("github-projects");
 
 const projects = [
     {
-        name: "JARVIS — Multi-Agent AI Desktop Assistant",
-        description: "Tony Stark-style always-on voice assistant with a frameless PyQt6 HUD and wake-word detection. Multi-agent routing engine dispatches commands to 8 specialist AI agents (Web, Code, System, Memory and more). Multi-provider API pool supports Gemini, Claude, Groq and OpenRouter with automatic key rotation and rate-limit fallback across 100% free tiers. 20 modular skills including system control, screen reader, process manager, code execution and real-time web search.",
+        name: "J.A.R.V.I.S. — MCU-Inspired Multi-Agent AI System",
+        description: "MCU-inspired AI agent network built across 3 live agents and 2 in development. J.A.R.V.I.S. is the orchestrator — a PyQt6 Iron Man HUD with wake-word detection ('Jarvis' / 'Wake up, Daddy's Home'), Whisper STT, edge-tts (en-GB-RyanNeural), SQLite persistent memory, app/OS control, DuckDuckGo web search, and auto rate-limit fallback between llama-3.3-70b and llama-3.1-8b on Groq's free tier. F.R.I.D.A.Y. is a real-time voice agent built on LiveKit Agents + FastMCP — Sarvam Saaras v3 STT, Gemini 2.5 Flash LLM, OpenAI TTS, exposing news, web, weather, markets, and system tools via MCP/SSE. V.E.R.O.N.I.C.A. is the comms agent — 23 tools across Gmail, Outlook (Microsoft Graph), Slack, and Telegram with OAuth 2.0, AI inbox triage, reply suggestion, thread summarisation, and follow-up drafting. E.D.I.T.H. (OSINT) and U.L.T.R.O.N. (security/automation) are in active development.",
         metrics: [
-            { num: "8", desc: "Specialist AI agents" },
-            { num: "20", desc: "Modular skills" },
-            { num: "100%", desc: "Free-tier APIs" }
+            { num: "3", desc: "Agents live (JARVIS, FRIDAY, VERONICA)" },
+            { num: "23", desc: "VERONICA tools across 4 platforms" },
+            { num: "2", desc: "Agents in development (EDITH, ULTRON)" }
         ],
-        tags: ["Python", "PyQt6", "Gemini API", "Anthropic API", "Groq", "SpeechRecognition", "Multi-Agent"],
+        tags: ["Python", "PyQt6", "Groq", "Gemini 2.5 Flash", "FastMCP", "LiveKit", "Whisper", "OAuth 2.0", "SQLite", "Multi-Agent"],
         url: "https://github.com/killerspidey/J.A.R.V.I.S.",
         featured: true
     },
