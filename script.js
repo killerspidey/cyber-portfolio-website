@@ -97,15 +97,15 @@ const projectContainer = document.getElementById("github-projects");
 
 const projects = [
     {
-        name: "J.A.R.V.I.S. — MCU-Inspired Multi-Agent AI System",
-        description: "MCU-inspired AI agent network built across 3 live agents and 2 in development. J.A.R.V.I.S. is the orchestrator — a PyQt6 Iron Man HUD with wake-word detection ('Jarvis' / 'Wake up, Daddy's Home'), Whisper STT, edge-tts (en-GB-RyanNeural), SQLite persistent memory, app/OS control, DuckDuckGo web search, and auto rate-limit fallback between llama-3.3-70b and llama-3.1-8b on Groq's free tier. F.R.I.D.A.Y. is a real-time voice agent built on LiveKit Agents + FastMCP — Sarvam Saaras v3 STT, Gemini 2.5 Flash LLM, OpenAI TTS, exposing news, web, weather, markets, and system tools via MCP/SSE. V.E.R.O.N.I.C.A. is the comms agent — 23 tools across Gmail, Outlook (Microsoft Graph), Slack, and Telegram with OAuth 2.0, AI inbox triage, reply suggestion, thread summarisation, and follow-up drafting. E.D.I.T.H. (OSINT) and U.L.T.R.O.N. (security/automation) are in active development.",
+        name: "Stark Agent Network — MCU-Inspired Multi-Agent AI System",
+        description: "5-agent MCU-inspired AI network with a shared agent bus. J.A.R.V.I.S. is the orchestrator — PyQt6 Iron Man HUD, Whisper STT, edge-tts (en-GB-RyanNeural), wake words ('Jarvis' / 'Wake up, Daddy's Home'), DuckDuckGo + Wikipedia search, app/OS control, screenshots, file access, SQLite persistent memory, and auto rate-limit fallback between llama-3.3-70b and llama-3.1-8b on Groq's free tier. F.R.I.D.A.Y. is the intel agent — LiveKit Agents + FastMCP over SSE, Sarvam Saaras v3 STT, Groq LLM, OpenAI nova TTS; 11 MCP tools covering global news (BBC/NYT/Reuters/Al Jazeera), live markets (S&P 500/BTC/ETH/Gold via yfinance), weather, web search, URL fetch, and APScheduler daily briefings with Telegram push. V.E.R.O.N.I.C.A. is the comms agent — FastMCP on port 8001; 25 tools across Gmail (8), Outlook via Microsoft Graph (4), Slack (5), Telegram (2), and AI drafting (6) with 8-tone support, inbox triage, reply suggestion, thread summarisation, and confirm-before-send across all channels via OAuth 2.0. E.D.I.T.H. (OSINT + research) and U.L.T.R.O.N. (security/automation — shell execution, Playwright browser, port scanning, log monitoring, permission auditing, task scheduling) are fully coded and in active testing.",
         metrics: [
-            { num: "3", desc: "Agents live (JARVIS, FRIDAY, VERONICA)" },
-            { num: "23", desc: "VERONICA tools across 4 platforms" },
-            { num: "2", desc: "Agents in development (EDITH, ULTRON)" }
+            { num: "5", desc: "Agents (3 live, 2 in testing)" },
+            { num: "25", desc: "VERONICA tools across 4 platforms" },
+            { num: "4", desc: "FastMCP servers on ports 8000–8003" }
         ],
-        tags: ["Python", "PyQt6", "Groq", "Gemini 2.5 Flash", "FastMCP", "LiveKit", "Whisper", "OAuth 2.0", "SQLite", "Multi-Agent"],
-        url: "https://github.com/killerspidey/J.A.R.V.I.S.",
+        tags: ["Python", "PyQt6", "Groq", "FastMCP", "LiveKit Agents", "Whisper", "OAuth 2.0", "Microsoft Graph", "SQLite", "ChromaDB", "Playwright", "Multi-Agent"],
+        url: "https://github.com/killerspidey/Stark-Network",
         featured: true
     },
     {
